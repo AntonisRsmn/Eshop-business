@@ -67,8 +67,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    /* background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover; */
     color: #fff;
+    background-color: #999;
     text-align: center;
     padding: 5rem 0;
 }
@@ -134,6 +135,7 @@ body {
 .product-card p {
     color: #ff6200;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .product-card button {
@@ -143,6 +145,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .product-card button:hover {
@@ -172,12 +175,12 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1.2rem;
     background-color: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
 }
 
