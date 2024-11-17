@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">E-Shop</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="cart.html" class="cart-link">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Your Cart</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Product 1"></td> <!-- Add image here -->
+                        <td>$50</td>
+                        <td><input type="number" value="1" min="1" max="10" /></td>
+                        <td>$50</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Product 2"></td> <!-- Add image here -->
+                        <td>$30</td>
+                        <td><input type="number" value="1" min="1" max="10" /></td>
+                        <td>$30</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <h3>Cart Summary</h3>
+                <p>Total: $80</p>
+                <a href="checkout.html" class="btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
