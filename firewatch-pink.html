@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">E-Shop</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Main Product Section -->
+    <main class="product-page">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-image">
+                    <img id="product-image" src="/Images/mousepad-firewatch-pink.png" alt="Product Image">
+                </div>
+                <div class="product-info">
+                    <h1 id="product-name">Gaming Mousepad Firewtch - Pink</h1>
+                    <p id="product-price" class="price">€25.00</p>
+                    <p id="product-description" class="description">The ultimate mousepad for your desk with multiple colors and sizes you can choose from <br><br> Size: 400 x 900 x 2mm</p>
+                    <p id="color" class="description">Color: Pink</p>
+                    <p id="id" class="description">Code: 100027</p>
+                    <div class="actions">
+                        <button class="btn add-to-cart"
+                                data-name="Gaming Mousepad Firewatch - Pink" 
+                                data-price="€25.00" 
+                                data-image="/Images/mousepad-firewatch-pink.png">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <a href="products.html" class="btn back-to-products">Back to Products</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart-utils.js"></script>
+</body>
+</html>

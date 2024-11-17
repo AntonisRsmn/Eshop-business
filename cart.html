@@ -7,69 +7,98 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">E-Shop</a>
             <nav class="nav">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="cart.html" class="cart-link">Cart</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main class="cart-page">
-        <div class="container">
-            <h1>Your Cart</h1>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Image</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Product 1</td>
-                        <td>
-                            <a href="product.html">
-                                <img src="https://via.placeholder.com/100" alt="Product 1"></td> <!-- Add image here -->               
-                            </a>
-                        </td>
-                        <td>$50</td>
-                        <td><input type="number" value="1" min="1" max="10" /></td>
-                        <td>$50</td>
-                        <td><button class="remove-btn">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>Product 2</td>
-                        <td>
-                            <a href="product.html">
-                                <img src="https://via.placeholder.com/100" alt="Product 2"></td> <!-- Add image here -->               
-                            </a>
-                        </td>
-                        <td>$30</td>
-                        <td><input type="number" value="1" min="1" max="10" /></td>
-                        <td>$30</td>
-                        <td><button class="remove-btn">Remove</button></td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Cart Section -->
+    <div class="cart-page container">
+        <h2>Your Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Items will be dynamically loaded here -->
+            </tbody>
+        </table>
 
-            <div class="cart-summary">
-                <h3>Cart Summary</h3>
-                <p>Total: $80</p>
-                <a href="checkout.html" class="btn">Proceed to Checkout</a>
-            </div>
+        <div id="cart-summary" class="cart-summary">
+            <h3>Total: €<span id="cart-total">0.00</span></h3>
         </div>
-    </main>
+    </div>
 
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            const cartCountElement = document.getElementById('cart-count');
+
+            let total = 0;
+
+            // Update cart count in the navbar
+            const updateCartCount = () => {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            };
+
+            // Display cart items
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<tr><td colspan="5">Your cart is empty.</td></tr>';
+            } else {
+                cart.forEach((item, index) => {
+                    const itemTotal = parseFloat(item.price.replace('€', '')) * item.quantity;
+                    total += itemTotal;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.price}</td>
+                        <td>${item.quantity}</td>
+                        <td>€${itemTotal.toFixed(2)}</td>
+                        <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+                    `;
+                    cartItemsContainer.appendChild(row);
+                });
+
+                // Update total in the summary
+                cartTotalElement.textContent = total.toFixed(2);
+            }
+
+            // Add remove functionality
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.getAttribute('data-index'), 10);
+                    cart.splice(index, 1); // Remove the item from the cart
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    window.location.reload(); // Reload the page to update the cart
+                });
+            });
+
+            // Update cart count when the page loads
+            updateCartCount();
+        });
+    </script>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>© 2024 E-Shop. All rights reserved.</p>

@@ -13,13 +13,12 @@
             <nav class="nav">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="cart.html" class="cart-link">Cart</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
             </nav>
         </div>
     </header>
-    
 
     <main>
         <section class="hero">
@@ -27,53 +26,61 @@
             <p>Discover our amazing products.</p>
             <a href="products.html" class="btn">Shop Now</a>
         </section>
-        
 
         <section id="products" class="products">
             <div class="container">
                 <h2>Featured Products</h2>
                 <div class="product-grid">
+
                     <div class="product-card">
-                        <a href="product.html">
-                            <img src="https://via.placeholder.com/150" alt="Product 1" href="product.html">                         
+                        <a href="firewatch-black.html">
+                            <img src="Images/mousepad-firewatch-black.png" alt="Product 1">
                         </a>
-                        <h3>Product 1</h3>
-                        <p>€20.00</p>
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <a href="product.html">
-                            <img src="https://via.placeholder.com/150" alt="Product 2" href="product.html">                         
-                        </a>
-                        <h3>Product 2</h3>
-                        <p>€30.00</p>
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <a href="product.html">
-                            <img src="https://via.placeholder.com/150" alt="Product 3" href="product.html">                         
-                        </a>
-                        <h3>Product 3</h3>
+                        <h3>Gaming Mousepad Firewatch - Black</h3>
                         <p>€25.00</p>
-                        <button>Add to Cart</button>
+                        <button class="add-to-cart" data-name="Gaming Mousepad Firewatch - Black" data-price="25.00" data-image="Images/mousepad-firewatch-black.png">Add to Cart</button>
                     </div>
-                    <div class="product-card" >
-                        <a href="product.html">
-                            <img src="https://via.placeholder.com/150" alt="Product 4" href="product.html">                         
+
+                    <div class="product-card">
+                        <a href="firewatch-original.html">
+                            <img src="Images/mousepad-firewatch-original.png" alt="Product 2">
                         </a>
-                        <h3>Product 4</h3>
-                        <p>€15.00</p>
-                        <button>Add to Cart</button>
+                        <h3>Gaming Mousepad Firewatch - Original</h3>
+                        <p>€25.00</p>
+                        <button class="add-to-cart" data-name="Gaming Mousepad Firewatch - Original" data-price="25.00" data-image="Images/mousepad-firewatch-original.png">Add to Cart</button>
                     </div>
+
+                    <div class="product-card">
+                        <a href="firewatch-purple.html">
+                            <img src="Images/mousepad-firewatch-purple.png" alt="Product 3">
+                        </a>
+                        <h3>Gaming Mousepad Firewatch - Purple</h3>
+                        <p>€25.00</p>
+                        <button class="add-to-cart" data-name="Gaming Mousepad Firewatch - Purple" data-price="25.00" data-image="Images/mousepad-firewatch-purple.png">Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <a href="firewatch-lightorange.html">
+                            <img src="Images/mousepad-firewatch-lightorange.png" alt="Product 4">
+                        </a>
+                        <h3>Gaming Mousepad Firewatch - Light Orange</h3>
+                        <p>€25.00</p>
+                        <button class="add-to-cart" data-name="Gaming Mousepad Firewatch - Light Orange" data-price="25.00" data-image="Images/mousepad-firewatch-lightorange.png">Add to Cart</button>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Add this script to handle the Add to Cart functionality -->
+    <script src="cart-utils.js"></script>
 
     <footer class="footer">
         <div class="container">
             <p>© 2024 E-Shop. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>

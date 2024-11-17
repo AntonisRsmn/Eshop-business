@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">E-Shop</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <form action="https://formspree.io/f/xgvezeqd" method="POST">
+            <h1 class="form-h1">Contact Form</h1>
+            <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
+            <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+            <textarea rows="5" cols="60" name="message" placeholder="Text" autocomplete="off" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+    <!-- Add this script to handle the Add to Cart functionality -->
+    <script src="cart-utils.js"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
