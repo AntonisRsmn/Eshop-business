@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem('cart', JSON.stringify(cart));
             document.dispatchEvent(new Event('cartUpdated'));
-            alert(`${product.name} has been added to your cart!`);
         });
     });
 
