@@ -46,14 +46,14 @@ body {
 }
 
 /* Navbar */
-.nav {
+.nav, .sidenav {
     display: flex;
     gap: 1rem;
     justify-content: flex-end; /* Align items to the right */
     list-style: none;
 }
 
-.nav a {
+.nav a, .sidenav a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -61,8 +61,14 @@ body {
     border-radius: 5px;
 }
 
-.nav a:hover {
+.nav a:hover, .sidenav a:hover{
     background-color: #555;
+}
+
+@media screen and (min-width: 700px) {
+    .sidenav, .logo-side {
+        display: none;
+    }
 }
 
 /* Hero Section */
@@ -152,15 +158,31 @@ body {
     background-color: #555;
 }
 
-.logo {
+.logo, .logo-side {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
 }
 
-.logo:hover {
+.logo:hover, .logo-side:hover {
     color: #ff6200;
+}
+
+@media screen and (max-width: 900px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* Footer */
