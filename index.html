@@ -9,16 +9,16 @@
 <body>
     <header class="header">
 
-        <!-- <div class="container">
+        <div class="container">
             <a href="index.html" class="logo-side">E-Shop</a>
             <nav class="sidenav">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
-                <a href="#about">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             </nav>
-        </div> -->
+        </div>
 
         <div class="container">
             <a href="index.html" class="logo">E-Shop</a>
@@ -29,6 +29,9 @@
                 <a href="contact.html">Contact</a>
                 <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
             </nav>
+            <ul class="nav-icon">   
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
         </div>
     </header>
 

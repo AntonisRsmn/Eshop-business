@@ -31,7 +31,7 @@ body {
 .header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0; 
 }
 
 .header .logo {
@@ -46,14 +46,14 @@ body {
 }
 
 /* Navbar */
-.nav, .sidenav {
+.nav, .sidenav, .nav-icon {
     display: flex;
     gap: 1rem;
     justify-content: flex-end; /* Align items to the right */
     list-style: none;
 }
 
-.nav a, .sidenav a {
+.nav a, .sidenav a, .nav-icon a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -69,7 +69,60 @@ body {
     .sidenav, .logo-side {
         display: none;
     }
+
+    .nav-icon {
+        display: none;
+        list-style: none;
+    }
 }
+
+/* Sidebar */
+@media screen and (max-width: 700px) {
+    .nav, .logo {
+        display: none;
+    }
+
+    .nav-icon {
+        display: flex;
+    }
+
+    .sidenav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: #333;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .sidenav li {
+        width: 100%;
+        font-size: 20px;
+        padding-top: 10%;
+    }
+
+    .sidenav a {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .nav-icon {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        margin-top: -30px;
+    }
+
+}
+
+
 
 /* Hero Section */
 .hero {
