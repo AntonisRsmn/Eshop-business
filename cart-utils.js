@@ -1,25 +1,25 @@
 // SideBar
-function showSidebar () {
-    const sidebar = document.querySelector(".sidenav")
-    sidebar.style.display = "flex"
+function showSidebar() {
+    const sidebar = document.querySelector(".sidenav");
+    sidebar.style.display = "flex";
 }
 
-function hideSidebar () {
-    const sidebar = document.querySelector(".sidenav")
-    sidebar.style.display = "none"
+function hideSidebar() {
+    const sidebar = document.querySelector(".sidenav");
+    sidebar.style.display = "none";
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const cartCountElement = document.getElementById('cart-count');
+    const cartCountElements = document.querySelectorAll('.cart-count');
 
     // Function to update the cart count in the navbar
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-        if (cartCountElement) {
-            cartCountElement.textContent = totalItems;
-        }
+        cartCountElements.forEach(element => {
+            element.textContent = totalItems;
+        });
     }
 
     // Call the function to set the initial count on page load
