@@ -7,7 +7,7 @@ function showSidebar () {
 function hideSidebar () {
     const sidebar = document.querySelector(".sidenav")
     sidebar.style.display = "none"
-}  
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const cartCountElement = document.getElementById('cart-count');
