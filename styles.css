@@ -51,7 +51,7 @@ body {
     padding: 1rem 0; 
 }
 
-.header .logo {
+.header .logo, .logo-side {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -68,6 +68,10 @@ body {
     gap: 1rem;
     justify-content: flex-end; /* Align items to the right */
     list-style: none;
+}
+
+.logo-side {
+    z-index: 999;
 }
 
 .nav a, .sidenav a, .nav-icon a {
@@ -143,7 +147,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url(image.png) no-repeat center center/cover;
+    background: url(firewatch\ 4k\ wallpaper.png) no-repeat center center/cover;
     color: #fff;
     background-color: #999;
     text-align: center;
