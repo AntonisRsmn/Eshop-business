@@ -25,7 +25,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--color-text-primary);
     background-color: #f9f9f9;
     min-height: 100vh; /* Ensures the body takes at least full height of the viewport */
     display: flex;
@@ -46,8 +46,8 @@ body {
 
 /* Header */
 .header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     padding: 1rem 0; 
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .nav a, .sidenav a, .nav-icon a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -83,7 +83,7 @@ body {
 }
 
 .nav a:hover, .sidenav a:hover{
-    background-color: #555;
+    background-color: var(--color-text-secondary);
 }
 
 @media screen and (min-width: 700px) {
@@ -114,7 +114,7 @@ body {
         height: 100vh;
         width: 250px;
         z-index: 999;
-        background-color: #333;
+        background-color: var(--color-text-primary);
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -143,12 +143,10 @@ body {
 
 }
 
-
-
 /* Hero Section */
 .hero {
     background: url(firewatch-background.png) no-repeat center center/cover;
-    color: #fff;
+    color: var(--color-white);
     background-color: #999;
     text-align: center;
     padding: 5rem 0;
@@ -165,8 +163,8 @@ body {
 }
 
 .hero .btn {
-    background-color: #ff6200;
-    color: #fff;
+    background-color: var(--color-accent);
+    color: var(--color-white);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     font-size: 1rem;
@@ -174,7 +172,7 @@ body {
 }
 
 .hero .btn:hover {
-    background-color: #e55b00;
+    background-color: var(--color-accent-hover);
 }
 
 /* Products Section */
@@ -195,9 +193,9 @@ body {
 }
 
 .product-card {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     text-align: center;
 }
@@ -213,14 +211,14 @@ body {
 }
 
 .product-card p {
-    color: #ff6200;
+    color: var(--color-accent);
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
 .product-card button {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
@@ -229,18 +227,18 @@ body {
 }
 
 .product-card button:hover {
-    background-color: #555;
+    background-color: var(--color-text-secondary);
 }
 
 .logo, .logo-side {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
 }
 
 .logo:hover, .logo-side:hover {
-    color: #ff6200;
+    color: var(--color-accent);
 }
 
 @media screen and (max-width: 900px) {
@@ -261,8 +259,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem; /* Ensures some space above footer */
@@ -272,8 +270,8 @@ body {
 .btn {
     display: inline-block;
     padding: 0.5rem 1.2rem;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -281,7 +279,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: var(--color-text-secondary);
 }
 
 /* General Product Page Styling */
@@ -294,9 +292,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
 }
 
@@ -314,19 +312,19 @@ body {
 .product-info h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--color-text-primary);
 }
 
 .product-info .price {
     font-size: 1.5rem;
-    color: #ff6200;
+    color: var(--color-accent);
     margin-bottom: 1rem;
 }
 
 .product-info .description {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--color-text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -337,8 +335,8 @@ body {
 
 .actions .btn {
     padding: 0.8rem 1.5rem;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -347,15 +345,15 @@ body {
 }
 
 .actions .btn:hover {
-    background-color: #555;
+    background-color: var(--color-text-secondary);
 }
 
 .actions .btn-buy {
-    background-color: #ff6200;
+    background-color: var(--color-accent);
 }
 
 .actions .btn-buy:hover {
-    background-color: #e55b00;
+    background-color: var(--color-accent-hover);
 }
 
 .product-image {
@@ -386,23 +384,23 @@ body {
 .cart-table td {
     padding: 1rem;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
 }
 
 .cart-table th {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
 }
 
 .cart-table td {
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .cart-table input[type="number"] {
     width: 50px;
     padding: 0.5rem;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
 }
 
 .cart-table img {
@@ -413,7 +411,7 @@ body {
 }
 
 .remove-btn {
-    background-color: #ff6200;
+    background-color: var(--color-accent);
     color: white;
     padding: 0.5rem 1rem;
     border: none;
@@ -422,14 +420,14 @@ body {
 }
 
 .remove-btn:hover {
-    background-color: #e55b00;
+    background-color: var(--color-accent-hover);
 }
 
 .cart-summary {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     text-align: center;
     margin-top: 2rem;
 }
@@ -445,7 +443,7 @@ body {
 }
 
 .cart-summary .btn {
-    background-color: #ff6200;
+    background-color: var(--color-accent);
     color: white;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -453,31 +451,31 @@ body {
 }
 
 .cart-summary .btn:hover {
-    background-color: #e55b00;
+    background-color: var(--color-accent-hover);
 }
 
 /* Cart link styling */
 .cart-link {
     font-weight: bold;
-    color: #ff6200;
+    color: var(--color-accent);
 }
 
 .cart-link:hover {
-    color: #e55b00;
+    color: var(--color-accent-hover);
 }
 
 
 /* Contact Form */
 input {
-    background-color: #f2f2f2; /* Light background */
+    background-color: var(--color-gray-light); /* Light background */
     width: 50%;
     margin: auto;
     margin-bottom: 20px;
     font-size: 18px;
     padding: 16px 16px;
-    border: 2px solid #333333; /* Dark text color */
+    border: 2px solid var(--color-text-primary)333; /* Dark text color */
     border-radius: 10px;
-    color: #333333; /* Dark text color */
+    color: var(--color-text-primary)333; /* Dark text color */
     display: flex;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
@@ -485,14 +483,14 @@ input {
 
 /* Text Area */
 textarea {
-    background-color: #f2f2f2; /* Light background */
+    background-color: var(--color-gray-light); /* Light background */
     width: 50%;
     margin: auto;
     font-size: 20px;
     padding: 16px 16px;
-    border: 2px solid #333333; /* Dark text color */
+    border: 2px solid var(--color-text-primary)333; /* Dark text color */
     border-radius: 10px;
-    color: #333333; /* Dark text color */
+    color: var(--color-text-primary)333; /* Dark text color */
     display: flex;
     font-weight: bold;
     margin-bottom: 5%;
@@ -500,23 +498,23 @@ textarea {
 
 /* Input Hover */
 input:hover {
-    background-color: #333333; /* Dark background on hover */
-    color: #ffffff; /* Light text color on hover */
+    background-color: var(--color-text-primary)333; /* Dark background on hover */
+    color: var(--color-white)fff; /* Light text color on hover */
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 /* Text Area Hover */
 textarea:hover {
-    background-color: #333333; /* Dark background on hover */
-    color: #ffffff; /* Light text color on hover */
+    background-color: var(--color-text-primary)333; /* Dark background on hover */
+    color: var(--color-white)fff; /* Light text color on hover */
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 /* Form Header */
 form h1, .contact {
-    color: #333333; /* Dark text color */
+    color: var(--color-text-primary)333; /* Dark text color */
     text-align: center;
     justify-content: center;
     font-size: 30px;
@@ -537,7 +535,7 @@ form button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #ff6200;
+    background-color: var(--color-accent);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     font-size: 1rem;
@@ -549,7 +547,7 @@ form button {
 
 /* Button Hover */
 form button:hover {
-    background-color: #555555; /* Dark background on hover */
+    background-color: var(--color-text-secondary)555; /* Dark background on hover */
     transition-duration: 0.3s;
 }
 
@@ -563,13 +561,13 @@ form button:hover {
 .form-h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--color-text-primary);
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text-primary);
+    color: var(--color-white);
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
