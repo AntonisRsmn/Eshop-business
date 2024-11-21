@@ -15,6 +15,16 @@
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
+#table {
+    transform:rotate(90deg);  
+}
+#table th, #table td{
+    transform:rotate(-90deg);
+}
+td {
+  height: 50px;
+}
+
 /* General Reset */
 * {
     margin: 0;
