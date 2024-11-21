@@ -1,3 +1,20 @@
+:root {
+    /* General Colors */
+    --color-text-primary: #333;
+    --color-text-secondary: #555;
+    --color-background-light: #f9f9f9;
+    --color-background-dark: #333;
+    --color-background-medium: #555;
+    --color-accent: #ff6200;
+    --color-accent-hover: #e55b00;
+    --color-white: #fff;
+    --color-gray-light: #f2f2f2;
+    --color-border: #ddd;
+
+    /* Shadow Colors */
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
 /* General Reset */
 * {
     margin: 0;
