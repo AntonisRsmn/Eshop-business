@@ -42,6 +42,7 @@
         <table class="cart-table">
             <thead>
                 <tr>
+                    <th>Image</th>
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
@@ -59,7 +60,6 @@
         </div>
     </div>
 
-    <!-- Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -85,6 +85,7 @@
 
                     const row = document.createElement('tr');
                     row.innerHTML = `
+                        <td><img src="${item.image}" alt="${item.name}" width="50"></td>
                         <td>${item.name}</td>
                         <td>${item.price}</td>
                         <td>${item.quantity}</td>
