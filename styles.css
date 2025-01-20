@@ -507,9 +507,9 @@ textarea {
 }
 
 /* Input Hover */
-input:hover {
-    background-color: var(--color-text-primary)333; /* Dark background on hover */
-    color: var(--color-white)fff; /* Light text color on hover */
+input:hover, #area1:hover {
+    background-color: var(--color-text-secondary); /* Dark background on hover */
+    color: var(--color-white); /* Light text color on hover */
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -557,7 +557,7 @@ form button {
 
 /* Button Hover */
 form button:hover {
-    background-color: var(--color-text-secondary)555; /* Dark background on hover */
+    background-color: var(--color-text-secondary); /* Dark background on hover */
     transition-duration: 0.3s;
 }
 
