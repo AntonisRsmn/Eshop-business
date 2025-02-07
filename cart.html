@@ -39,21 +39,9 @@
     <!-- Cart Section -->
     <div class="cart-page container">
         <h2>Your Cart</h2>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-                <!-- Items will be dynamically loaded here -->
-            </tbody>
-        </table>
+        <div id="cart-items" class="cart-items">
+            <!-- Items will be dynamically loaded here -->
+        </div>
 
         <div id="cart-summary" class="cart-summary">
             <h3>Total: €<span id="cart-total">0.00</span></h3>
@@ -65,7 +53,7 @@
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartItemsContainer = document.getElementById('cart-items');
             const cartTotalElement = document.getElementById('cart-total');
-            const cartCountElement = document.getElementById('cart-count');
+            const cartCountElement = document.querySelector('.cart-count');
 
             let total = 0;
 
@@ -77,22 +65,25 @@
 
             // Display cart items
             if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<tr><td colspan="5">Your cart is empty.</td></tr>';
+                cartItemsContainer.innerHTML = '<div class="cart-item empty">Your cart is empty.</div>';
             } else {
                 cart.forEach((item, index) => {
                     const itemTotal = parseFloat(item.price.replace('€', '')) * item.quantity;
                     total += itemTotal;
 
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td><img src="${item.image}" alt="${item.name}" width="50"></td>
-                        <td>${item.name}</td>
-                        <td>${item.price}</td>
-                        <td>${item.quantity}</td>
-                        <td>€${itemTotal.toFixed(2)}</td>
-                        <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.price}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                            <p>Total: €${itemTotal.toFixed(2)}</p>
+                            <button class="remove-btn" data-index="${index}">Remove</button>
+                        </div>
                     `;
-                    cartItemsContainer.appendChild(row);
+                    cartItemsContainer.appendChild(cartItem);
                 });
 
                 // Update total in the summary
@@ -112,6 +103,19 @@
             // Update cart count when the page loads
             updateCartCount();
         });
+    </script>
+
+    <!-- Cart functionality -->
+    <script>
+    function showSidebar() {
+        const sidebar = document.querySelector(".sidenav");
+        sidebar.style.display = "flex";
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector(".sidenav");
+        sidebar.style.display = "none";
+    }
     </script>
 
     <!-- Footer -->

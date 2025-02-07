@@ -15,16 +15,6 @@
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-#table {
-    transform:rotate(90deg);  
-}
-#table th, #table td{
-    transform:rotate(-90deg);
-}
-td {
-  height: 50px;
-}
-
 /* General Reset */
 * {
     margin: 0;
@@ -32,19 +22,20 @@ td {
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--color-text-primary);
     background-color: #f9f9f9;
-    min-height: 100vh; /* Ensures the body takes at least full height of the viewport */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stacks the sections (header, main, footer) vertically */
+    flex-direction: column;
 }
 
 /* Main Content Wrapper */
 .main-wrapper {
-    flex: 1; /* Ensures that the main content takes up remaining space */
+    flex: 1;
 }
 
 /* Container Class */
@@ -54,11 +45,11 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
+/* Header Styling */
 .header {
     background-color: var(--color-text-primary);
     color: var(--color-white);
-    padding: 1rem 0; 
+    padding: 1rem 0;
 }
 
 .header .logo, .logo-side {
@@ -72,11 +63,11 @@ body {
     align-items: center;
 }
 
-/* Navbar */
+/* Navbar Styling */
 .nav, .sidenav, .nav-icon {
     display: flex;
     gap: 1rem;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
     list-style: none;
 }
 
@@ -92,10 +83,11 @@ body {
     border-radius: 5px;
 }
 
-.nav a:hover, .sidenav a:hover{
+.nav a:hover, .sidenav a:hover {
     background-color: var(--color-text-secondary);
 }
 
+/* Responsive Navbar Styling */
 @media screen and (min-width: 700px) {
     .sidenav, .logo-side {
         display: none;
@@ -107,7 +99,6 @@ body {
     }
 }
 
-/* Sidebar */
 @media screen and (max-width: 700px) {
     .nav, .logo {
         display: none;
@@ -150,10 +141,9 @@ body {
         width: 100%;
         margin-top: -30px;
     }
-
 }
 
-/* Hero Section */
+/* Hero Section Styling */
 .hero {
     background: url(firewatch-background.png) no-repeat center center/cover;
     color: var(--color-white);
@@ -185,7 +175,7 @@ body {
     background-color: var(--color-accent-hover);
 }
 
-/* Products Section */
+/* Products Section Styling */
 .products {
     padding: 3rem 0;
     text-align: center;
@@ -251,6 +241,7 @@ body {
     color: var(--color-accent);
 }
 
+/* Responsive Product Grid Styling */
 @media screen and (max-width: 900px) {
     .product-grid {
         display: grid;
@@ -267,14 +258,14 @@ body {
     }
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
     background-color: var(--color-text-primary);
     color: var(--color-white);
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem; /* Ensures some space above footer */
-    margin-top: auto; /* Pushes the footer to the bottom of the screen if content is short */
+    margin-top: 2rem;
+    margin-top: auto;
 }
 
 .btn {
@@ -384,40 +375,52 @@ body {
     background-color: #f9f9f9;
 }
 
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.cart-table th,
-.cart-table td {
-    padding: 1rem;
-    text-align: left;
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
     border: 1px solid var(--color-border);
-}
-
-.cart-table th {
-    background-color: var(--color-text-primary);
-    color: var(--color-white);
-}
-
-.cart-table td {
+    border-radius: 12px;
     background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cart-table input[type="number"] {
-    width: 50px;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid var(--color-border);
-}
-
-.cart-table img {
-    width: 100px; /* Adjust image size */
-    height: auto;
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-text-primary);
+}
+
+.cart-item-details p {
+    margin: 0.5rem 0;
+    color: var(--color-text-secondary);
+}
+
+.cart-item-details .price,
+.cart-item-details .quantity,
+.cart-item-details .total {
+    font-weight: bold;
 }
 
 .remove-btn {
@@ -427,6 +430,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
 }
 
 .remove-btn:hover {
@@ -435,15 +440,16 @@ body {
 
 .cart-summary {
     background-color: var(--color-white);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     border: 1px solid var(--color-border);
     text-align: center;
     margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cart-summary h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -458,73 +464,116 @@ body {
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .cart-summary .btn:hover {
     background-color: var(--color-accent-hover);
 }
 
-/* Cart link styling */
-.cart-link {
-    font-weight: bold;
-    color: var(--color-accent);
+.cart-item.empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var (--color-text-secondary);
 }
 
-.cart-link:hover {
-    color: var(--color-accent-hover);
+/* Responsive Styles for Cart on Smaller Screens */
+@media screen and (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .cart-item-details {
+        align-items: center;
+    }
+
+    .cart-item-details h4 {
+        font-size: 1.2rem;
+    }
+
+    .cart-item-details p {
+        font-size: 0.9rem;
+        margin: 0.3rem 0;
+    }
+
+    .remove-btn {
+        align-self: center;
+        margin-top: 1rem;
+    }
+
+    .cart-summary {
+        padding: 1rem;
+    }
+
+    .cart-summary h3 {
+        font-size: 1.5rem;
+    }
+
+    .cart-summary p {
+        font-size: 1rem;
+    }
+
+    .cart-summary .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
 }
 
-
-/* Contact Form */
+/* Contact Form Styling */
 input {
-    background-color: var(--color-gray-light); /* Light background */
+    background-color: var(--color-gray-light);
     width: 50%;
     margin: auto;
     margin-bottom: 20px;
     font-size: 18px;
     padding: 16px 16px;
-    border: 2px solid var(--color-text-primary)333; /* Dark text color */
+    border: 2px solid var(--color-text-primary)333;
     border-radius: 10px;
-    color: var(--color-text-primary)333; /* Dark text color */
+    color: var(--color-text-primary)333;
     display: flex;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
 }
 
-/* Text Area */
 textarea {
-    background-color: var(--color-gray-light); /* Light background */
+    background-color: var(--color-gray-light);
     width: 50%;
     margin: auto;
     font-size: 20px;
     padding: 16px 16px;
-    border: 2px solid var(--color-text-primary)333; /* Dark text color */
+    border: 2px solid var(--color-text-primary)333;
     border-radius: 10px;
-    color: var(--color-text-primary)333; /* Dark text color */
+    color: var(--color-text-primary)333;
     display: flex;
     font-weight: bold;
     margin-bottom: 5%;
 }
 
-/* Input Hover */
 input:hover, #area1:hover {
-    background-color: var(--color-text-secondary); /* Dark background on hover */
-    color: var(--color-white); /* Light text color on hover */
+    background-color: var(--color-text-secondary);
+    color: var(--color-white);
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-/* Text Area Hover */
 textarea:hover {
-    background-color: var(--color-text-primary)333; /* Dark background on hover */
-    color: var(--color-white)fff; /* Light text color on hover */
+    background-color: var(--color-text-primary)333;
+    color: var(--color-white)fff;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-/* Form Header */
 form h1, .contact {
-    color: var(--color-text-primary)333; /* Dark text color */
+    color: var(--color-text-primary)333;
     text-align: center;
     justify-content: center;
     font-size: 30px;
@@ -538,7 +587,6 @@ form h1, .contact {
     margin-left: auto;
 }
 
-/* Button */
 form button {
     margin-bottom: 4%;
     color: white;
@@ -555,13 +603,11 @@ form button {
     cursor: pointer;
 }
 
-/* Button Hover */
 form button:hover {
-    background-color: var(--color-text-secondary); /* Dark background on hover */
+    background-color: var(--color-text-secondary);
     transition-duration: 0.3s;
 }
 
-/* Input / Text Area Main Screen */
 @media screen and (max-width: 1024px) {
     input, textarea {
         width: 80%;
@@ -574,7 +620,7 @@ form button:hover {
     color: var(--color-text-primary);
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
     background-color: var(--color-text-primary);
     color: var(--color-white);
