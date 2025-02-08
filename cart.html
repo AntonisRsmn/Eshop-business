@@ -84,6 +84,9 @@
                     const product = products.find(p => p.name === item.name);
                     const productCode = product ? product.code : 'undefined';
 
+                    // Debugging log
+                    console.log(`Item: ${item.name}, Product Code: ${productCode}`);
+
                     const cartItem = document.createElement('div');
                     cartItem.classList.add('cart-item');
                     cartItem.innerHTML = `
