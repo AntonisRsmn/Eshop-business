@@ -36,6 +36,8 @@ body {
 /* Main Content Wrapper */
 .main-wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Container Class */
@@ -227,7 +229,7 @@ body {
 }
 
 .product-card button:hover {
-    background-color: var(--color-text-secondary);
+    background-color: var (--color-text-secondary);
 }
 
 .logo, .logo-side {
@@ -627,4 +629,5 @@ form button:hover {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+    margin-top: auto;
 }
