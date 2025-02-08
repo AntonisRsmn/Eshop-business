@@ -55,7 +55,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             const orderNumber = localStorage.getItem('orderNumber') || Math.floor(Math.random() * 1000000);
             const orderTotal = localStorage.getItem('orderTotal') || '0.00';
             const orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
@@ -64,6 +64,10 @@
             const orderTotalElement = document.getElementById('order-total');
             const orderItemsContainer = document.getElementById('order-items');
 
+            // Fetch product data from JSON file
+            const response = await fetch('data/products.json');
+            const products = await response.json();
+
             orderNumberElement.textContent = orderNumber;
             orderTotalElement.textContent = orderTotal;
 
@@ -71,13 +75,17 @@
                 orderItemsContainer.innerHTML = '<div class="order-item empty">Your order is empty.</div>';
             } else {
                 orderItems.forEach(item => {
+                    // Find the product code using the product name
+                    const product = products.find(p => p.name === item.name);
+                    const productCode = product ? product.code : 'undefined';
+
                     const orderItem = document.createElement('div');
                     orderItem.classList.add('order-item');
                     orderItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="order-item-image" style="width: 200px; height: 200px;">
+                        <img src="${item.image.replace('../', '')}" alt="${item.name}" class="order-item-image" style="width: 200px; height: 200px;">
                         <div class="order-item-details">
                             <h4>${item.name}</h4>
-                            <p>Product Code: ${item.id}</p>
+                            <p>Product Code: ${productCode}</p>
                             <p>${item.price}</p>
                             <p>Quantity: ${item.quantity}</p>
                             <p>Total: €${(parseFloat(item.price.replace('€', '').trim()) * item.quantity).toFixed(2)}</p>

@@ -50,7 +50,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartItemsContainer = document.getElementById('cart-items');
             const cartTotalElement = document.getElementById('cart-total');
@@ -58,6 +58,10 @@
             const checkoutButton = document.getElementById('checkout-button');
 
             let total = 0;
+
+            // Fetch product data from JSON file
+            const response = await fetch('data/products.json');
+            const products = await response.json();
 
             // Update cart count in the navbar
             const updateCartCount = () => {
@@ -76,16 +80,20 @@
                     const itemTotal = parseFloat(item.price.replace('€', '')) * item.quantity;
                     total += itemTotal;
 
+                    // Find the product code using the product name
+                    const product = products.find(p => p.name === item.name);
+                    const productCode = product ? product.code : 'undefined';
+
                     const cartItem = document.createElement('div');
                     cartItem.classList.add('cart-item');
                     cartItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <img src="${item.image.replace('../', '')}" alt="${item.name}" class="cart-item-image">
                         <div class="cart-item-details">
                             <h4>${item.name}</h4>
                             <p>${item.price}</p>
                             <p>Quantity: ${item.quantity}</p>
                             <p>Total: €${itemTotal.toFixed(2)}</p>
-                            <p>Product Code: ${item.id}</p>
+                            <p>Product Code: ${productCode}</p>
                             <button class="remove-btn" data-index="${index}">Remove</button>
                         </div>
                     `;
