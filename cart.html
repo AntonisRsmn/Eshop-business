@@ -113,7 +113,6 @@
                 localStorage.setItem('orderNumber', orderNumber);
                 localStorage.setItem('orderTotal', total.toFixed(2));
                 localStorage.setItem('orderItems', JSON.stringify(cart));
-                localStorage.removeItem('cart'); // Clear the cart
                 window.location.href = 'checkout.html';
             });
 

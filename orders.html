@@ -56,8 +56,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const orderNumber = localStorage.getItem('orderNumber');
-            const orderTotal = localStorage.getItem('orderTotal');
+            const orderNumber = localStorage.getItem('orderNumber') || Math.floor(Math.random() * 1000000);
+            const orderTotal = localStorage.getItem('orderTotal') || '0.00';
             const orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
 
             const orderNumberElement = document.getElementById('order-number');
@@ -74,7 +74,7 @@
                     const orderItem = document.createElement('div');
                     orderItem.classList.add('order-item');
                     orderItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="order-item-image">
+                        <img src="${item.image}" alt="${item.name}" class="order-item-image" style="width: 200px; height: 200px;">
                         <div class="order-item-details">
                             <h4>${item.name}</h4>
                             <p>Product Code: ${item.id}</p>

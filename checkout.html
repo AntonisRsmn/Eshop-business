@@ -341,9 +341,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const checkoutTotal = localStorage.getItem('checkoutTotal');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const checkoutTotalElement = document.getElementById('checkout-total');
-            checkoutTotalElement.textContent = checkoutTotal;
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = parseFloat(item.price.replace('€', '')) * item.quantity;
+                total += itemTotal;
+            });
+
+            checkoutTotalElement.textContent = total.toFixed(2);
         });
 
         document.getElementById('payment-form').addEventListener('submit', function(event) {
@@ -365,30 +372,14 @@
                 expiryDate: paymentForm['expiry-date'].value,
                 cvv: paymentForm['cvv'].value,
                 orderNumber: localStorage.getItem('orderNumber'),
-                orderTotal: localStorage.getItem('orderTotal')
+                orderTotal: document.getElementById('checkout-total').textContent
             };
 
-            fetch('/submit-order', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(order)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                alert('Order placed successfully!');
-                window.location.href = 'orders.html';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error placing your order. Please try again.');
-            });
+            // Clear the cart
+            localStorage.removeItem('cart');
+
+            // Redirect to orders page
+            window.location.href = 'orders.html';
         });
     </script>
 </body>
