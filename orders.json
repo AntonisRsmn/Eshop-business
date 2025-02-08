@@ -1,0 +1,17 @@
+[
+  {
+    "customerNumber": 342781,
+    "firstName": "Antonis",
+    "lastName": "Rusman",
+    "email": "antonisxgr05@gmail.com",
+    "address": "Papadiamanti 90",
+    "city": "korydallos",
+    "country": "GR",
+    "zip": "18122",
+    "cardNumber": "1234567815489562",
+    "expiryDate": "1228",
+    "cvv": "521",
+    "orderNumber": "289584",
+    "orderTotal": "25.00"
+  }
+]

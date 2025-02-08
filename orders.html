@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <header class="header">
+
+        <div class="container">
+            <a href="index.html" class="logo-side">E-Shop</a>
+            <nav class="sidenav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            </nav>
+        </div>
+
+        <div class="container">
+            <a href="index.html" class="logo">E-Shop</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
+            </nav>
+            <ul class="nav-icon">   
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Order Section -->
+    <div class="order-page container">
+        <h2>Your Order</h2>
+        <div id="order-summary" class="order-summary">
+            <h3>Order Number: <span id="order-number"></span></h3>
+            <h3>Total: €<span id="order-total">0.00</span></h3>
+        </div>
+        <div id="order-items" class="order-items">
+            <!-- Items will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderNumber = localStorage.getItem('orderNumber');
+            const orderTotal = localStorage.getItem('orderTotal');
+            const orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
+
+            const orderNumberElement = document.getElementById('order-number');
+            const orderTotalElement = document.getElementById('order-total');
+            const orderItemsContainer = document.getElementById('order-items');
+
+            orderNumberElement.textContent = orderNumber;
+            orderTotalElement.textContent = orderTotal;
+
+            if (orderItems.length === 0) {
+                orderItemsContainer.innerHTML = '<div class="order-item empty">Your order is empty.</div>';
+            } else {
+                orderItems.forEach(item => {
+                    const orderItem = document.createElement('div');
+                    orderItem.classList.add('order-item');
+                    orderItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="order-item-image">
+                        <div class="order-item-details">
+                            <h4>${item.name}</h4>
+                            <p>Product Code: ${item.id}</p>
+                            <p>${item.price}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                            <p>Total: €${(parseFloat(item.price.replace('€', '').trim()) * item.quantity).toFixed(2)}</p>
+                        </div>
+                    `;
+                    orderItemsContainer.appendChild(orderItem);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

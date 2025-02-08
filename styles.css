@@ -394,6 +394,18 @@ body {
 }
 
 .cart-item img {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.cart-item img {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -530,6 +542,193 @@ body {
     }
 }
 
+/* Order Page Styling */
+.order-page {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-item img {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .order-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.order-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.order-item-details h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-text-primary);
+}
+
+.order-item-details p {
+    margin: 0.5rem 0;
+    color: var(--color-text-secondary);
+}
+
+.order-item-details .price,
+.order-item-details .quantity,
+.order-item-details .total {
+    font-weight: bold;
+}
+
+.order-summary {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.order-summary p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.order-item.empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+/* Responsive Styles for Order on Smaller Screens */
+@media screen and (max-width: 600px) {
+    .order-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .order-item img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .order-item-details {
+        align-items: center;
+    }
+
+    .order-item-details h4 {
+        font-size: 1.2rem;
+    }
+
+    .order-item-details p {
+        font-size: 0.9rem;
+        margin: 0.3rem 0;
+    }
+
+    .order-summary {
+        padding: 1rem;
+    }
+
+    .order-summary h3 {
+        font-size: 1.5rem;
+    }
+
+    .order-summary p {
+        font-size: 1rem;
+    }
+}
+
+/* Checkout Page Specific Styles */
+.checkout-page {
+    padding: 2rem 0;
+}
+
+.checkout-form, .payment-form {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.checkout-form h2, .payment-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+}
+
+.checkout-form .form-group, .payment-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.checkout-form label, .payment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.checkout-form input, .checkout-form select, .payment-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.checkout-form button, .payment-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form button:hover, .payment-form button:hover {
+    background-color: var(--color-accent-hover);
+}
+
 /* Contact Form Styling */
 input {
     background-color: var(--color-gray-light);
@@ -606,6 +805,27 @@ form button {
 }
 
 form button:hover {
+    background-color: var(--color-text-secondary);
+    transition-duration: 0.3s;
+}
+
+.btn-submit {
+    margin-bottom: 4%;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
     background-color: var(--color-text-secondary);
     transition-duration: 0.3s;
 }
