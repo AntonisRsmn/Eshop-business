@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 3000;
-const ordersFilePath = path.join(__dirname, 'orders.json');
+const customersFilePath = path.join(__dirname, 'customers.json');
 
 // Serve static files from the root directory
 app.use(express.static(__dirname));
@@ -17,26 +17,26 @@ app.use(bodyParser.json());
 app.post('/submit-order', (req, res) => {
     const newOrder = req.body;
 
-    fs.readFile(ordersFilePath, 'utf8', (err, data) => {
+    fs.readFile(customersFilePath, 'utf8', (err, data) => {
         if (err) {
-            console.error('Error reading orders file:', err);
+            console.error('Error reading customers file:', err);
             return res.status(500).json({ message: 'Internal server error' });
         }
 
-        let orders = JSON.parse(data);
-        const existingOrderIndex = orders.findIndex(order => order.email === newOrder.email);
+        let customers = JSON.parse(data);
+        const existingCustomerIndex = customers.findIndex(customer => customer.email === newOrder.email);
 
-        if (existingOrderIndex !== -1) {
-            // Update existing order
-            orders[existingOrderIndex] = {
-                ...orders[existingOrderIndex],
+        if (existingCustomerIndex !== -1) {
+            // Update existing customer
+            customers[existingCustomerIndex] = {
+                ...customers[existingCustomerIndex],
                 ...newOrder,
                 orderNumber: newOrder.orderNumber,
                 orderTotal: newOrder.orderTotal
             };
         } else {
-            // Add new order
-            orders.push({
+            // Add new customer
+            customers.push({
                 customerNumber: newOrder.customerNumber,
                 firstName: newOrder.firstName,
                 lastName: newOrder.lastName,
@@ -53,9 +53,9 @@ app.post('/submit-order', (req, res) => {
             });
         }
 
-        fs.writeFile(ordersFilePath, JSON.stringify(orders, null, 2), (err) => {
+        fs.writeFile(customersFilePath, JSON.stringify(customers, null, 2), (err) => {
             if (err) {
-                console.error('Error writing to orders file:', err);
+                console.error('Error writing to customers file:', err);
                 return res.status(500).json({ message: 'Internal server error' });
             }
 
