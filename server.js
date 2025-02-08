@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const customersFilePath = path.join(__dirname, 'customers.json');
 
 // Serve static files from the root directory
