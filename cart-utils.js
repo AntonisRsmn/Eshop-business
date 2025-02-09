@@ -31,26 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add-to-Cart Button Logic (works for both index.html and product.html)
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Extract product data from the button's data attributes or the page
-            const product = {
-                name: button.getAttribute('data-name') || document.getElementById('product-name').textContent,
-                price: button.getAttribute('data-price') || document.getElementById('product-price').textContent,
-                image: button.getAttribute('data-image') || document.getElementById('product-image').src,
-                quantity: 1
-            };
+        button.addEventListener('click', (event) => {
+            const name = event.target.getAttribute('data-name');
+            const price = event.target.getAttribute('data-price');
+            const image = event.target.getAttribute('data-image');
+            const code = event.target.getAttribute('data-code'); // Ensure the product code is captured
 
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.name === product.name);
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-            if (existingProduct) {
-                existingProduct.quantity += 1;
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
             } else {
-                cart.push(product);
+                cart.push({ name, price, image, code, quantity: 1 });
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
-            document.dispatchEvent(new Event('cartUpdated'));
+            updateCartCount();
         });
     });
 
