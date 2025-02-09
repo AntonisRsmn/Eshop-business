@@ -320,7 +320,7 @@ body {
 
 .product-info .price {
     font-size: 1.5rem;
-    color: var(--color-accent);
+    color: var (--color-accent);
     margin-bottom: 1rem;
 }
 
@@ -828,4 +828,20 @@ form button:hover {
     padding: 1rem 0;
     margin-top: 2rem;
     margin-top: auto;
+}
+
+/* Buy More Button Styling */
+.btn.buy-more {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn.buy-more:hover {
+    background-color: var(--color-accent-hover);
 }
