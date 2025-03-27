@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <header class="header">
+
+        <div class="container">
+            <a href="../index.html" class="logo-side">E-Shop</a>
+            <nav class="sidenav">
+                <a href="../index.html">Home</a>
+                <a href="../products.html">Products</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            </nav>
+        </div>
+
+        <div class="container">
+            <a href="../index.html" class="logo">E-Shop</a>
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="../products.html">Products</a>
+                <!-- <a href="#about">About</a> -->
+                <a href="../contact.html">Contact</a>
+                <a href="../cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
+            </nav>
+            <ul class="nav-icon">   
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="product-page">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-image">
+                    <img id="product-image" src="../Images/iphone-case-black.avif" alt="iPhone Case - Black">
+                </div>
+                <div class="product-info">
+                    <h1 id="product-name">Black Silicone iPhone Case</h1>
+                    <p id="product-price" class="price"><b>€11.00</b></p>
+                    <p id="product-description" class="description">
+                        A sleek and durable iPhone case designed to protect your phone while maintaining style. <br><br>
+                        Material: High-quality silicone
+                    </p>
+                    <p id="color" class="description">Color: Black</p>
+                    <p id="id" class="description">Code: <span id="product-code">1000018</span></p>
+                    <div class="form-group">
+                        <label for="model-select">Select Model:</label>
+                        <select id="model-select" class="styled-dropdown"></select>
+                    </div>
+                    <div class="actions">
+                        <button id="add-to-cart-btn" class="btn add-to-cart"
+                                data-name="Black Silicone iPhone Case" 
+                                data-price="€11.00" 
+                                data-image="../Images/iphone-case-black.avif"
+                                data-code="1000018"
+                                data-color="Black"
+                                data-model="iPhone 11">
+                            Add to Cart
+                        </button>
+                        <a href="../products.html" class="btn buy-more">Buy More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this script to handle the Add to Cart functionality -->
+    <script src="../cart-utils.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const modelSelect = document.getElementById('model-select');
+            const productName = document.getElementById('product-name');
+            const productCode = document.getElementById('product-code');
+            const addToCartButton = document.getElementById('add-to-cart-btn');
+            
+            try {
+                // Fetch the product data from the correct JSON file
+                const response = await fetch('../data/products-database.json');
+                const products = await response.json();
+
+                // Filter products by color (e.g., "Black")
+                const filteredProducts = products.filter(product => product.color.toLowerCase() === 'black');
+
+                // Sort products by model in ascending order
+                filteredProducts.sort((a, b) => a.model.localeCompare(b.model));
+
+                // Populate the dropdown menu with models
+                modelSelect.innerHTML = ''; // Clear existing options
+                filteredProducts.forEach(product => {
+                    const option = document.createElement('option');
+                    option.value = product.code;
+                    option.textContent = product.model;
+                    modelSelect.appendChild(option);
+                });
+
+                // Set initial product details based on the first model
+                if (filteredProducts.length > 0) {
+                    const initialProduct = filteredProducts[0];
+                    productName.textContent = `iPhone Case - ${initialProduct.model}`;
+                    productCode.textContent = initialProduct.code;
+                    addToCartButton.setAttribute('data-name', `iPhone Case - ${initialProduct.model}`);
+                    addToCartButton.setAttribute('data-code', initialProduct.code);
+                    addToCartButton.setAttribute('data-model', initialProduct.model);
+                }
+
+                // Update product details when the dropdown selection changes
+                modelSelect.addEventListener('change', () => {
+                    const selectedCode = modelSelect.value;
+                    const selectedProduct = filteredProducts.find(product => product.code === parseInt(selectedCode, 10));
+                    productName.textContent = `iPhone Case - ${selectedProduct.model}`;
+                    productCode.textContent = selectedProduct.code;
+                    addToCartButton.setAttribute('data-name', `iPhone Case - ${selectedProduct.model}`);
+                    addToCartButton.setAttribute('data-code', selectedProduct.code);
+                    addToCartButton.setAttribute('data-model', selectedProduct.model);
+                });
+            } catch (error) {
+                console.error('Error fetching product data:', error);
+            }
+        });
+    </script>
+    <style>
+        @media screen and (max-width: 1145px) {
+            .product-details {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -50,7 +50,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartItemsContainer = document.getElementById('cart-items');
             const cartTotalElement = document.getElementById('cart-total');
@@ -58,10 +58,6 @@
             const checkoutButton = document.getElementById('checkout-button');
 
             let total = 0;
-
-            // Fetch product data from JSON file
-            const response = await fetch('data/products.json');
-            const products = await response.json();
 
             // Update cart count in the navbar
             const updateCartCount = () => {
@@ -80,23 +76,17 @@
                     const itemTotal = parseFloat(item.price.replace('€', '')) * item.quantity;
                     total += itemTotal;
 
-                    // Find the product code using the product name
-                    const product = products.find(p => p.name === item.name);
-                    const productCode = product ? product.code : 'undefined';
-
-                    // Debugging log
-                    console.log(`Item: ${item.name}, Product Code: ${productCode}`);
-
                     const cartItem = document.createElement('div');
                     cartItem.classList.add('cart-item');
                     cartItem.innerHTML = `
                         <img src="${item.image.replace('../', '')}" alt="${item.name}" class="cart-item-image">
                         <div class="cart-item-details">
                             <h4>${item.name}</h4>
-                            <p>${item.price}</p>
+                            <p>Color: ${item.color}</p>
+                            <p>Code: ${item.code}</p>
+                            <p>Price: ${item.price}</p>
                             <p>Quantity: ${item.quantity}</p>
                             <p>Total: €${itemTotal.toFixed(2)}</p>
-                            <p>Product Code: ${productCode}</p>
                             <button class="remove-btn" data-index="${index}">Remove</button>
                         </div>
                     `;
@@ -144,6 +134,49 @@
         sidebar.style.display = "none";
     }
     </script>
+
+    <script>
+        // Ensure cart count is updated on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCountElements = document.querySelectorAll('.cart-count');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            cartCountElements.forEach(element => {
+                element.textContent = totalItems;
+            });
+        });
+    </script>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AXoKr7h8XFqaUlVx44gAnp-6bwbLODoaFKoGjukO760DCShuSAfjoxrfO4SXJnmZNm-f8IxaTOZ-VKEW&currency=USD"></script>
+
+    <div id="paypal-button-container"></div>
+    <div id="paypal-button-container"></div>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // Get the dynamic cart total
+                let cartTotal = document.getElementById("cart-total").textContent;
+
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: cartTotal // Use the dynamic cart total
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                    localStorage.removeItem('cart'); // Clear cart after payment
+                    window.location.href = "thank-you.html"; // Redirect after payment
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+
 
     <!-- Footer -->
     <footer class="footer">

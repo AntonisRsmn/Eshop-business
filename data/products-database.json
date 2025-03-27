@@ -1,0 +1,1262 @@
+[
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "clay",
+        "code": 1000000
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "lightblue",
+        "code": 1000001
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "ultramarine",
+        "code": 1000002
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "white",
+        "code": 1000003
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "newpurple",
+        "code": 1000004
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "pitaya",
+        "code": 1000005
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "pink",
+        "code": 1000006
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "plum",
+        "code": 1000007
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "lightpink",
+        "code": 1000008
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "black",
+        "code": 1000009
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "pistachio",
+        "code": 1000010
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "red",
+        "code": 1000011
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "blue",
+        "code": 1000012
+    },
+    {
+        "model": "iPhone 12 Or 12 Pro",
+        "color": "skyblue",
+        "code": 1000013
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "clay",
+        "code": 1000014
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "lightblue",
+        "code": 1000015
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "ultramarine",
+        "code": 1000016
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "white",
+        "code": 1000017
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "newpurple",
+        "code": 1000018
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "pitaya",
+        "code": 1000019
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "pink",
+        "code": 1000020
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "plum",
+        "code": 1000021
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "lightpink",
+        "code": 1000022
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "black",
+        "code": 1000023
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "pistachio",
+        "code": 1000024
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "red",
+        "code": 1000025
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "blue",
+        "code": 1000026
+    },
+    {
+        "model": "iPhone 13 Pro",
+        "color": "skyblue",
+        "code": 1000027
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "clay",
+        "code": 1000028
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "lightblue",
+        "code": 1000029
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "ultramarine",
+        "code": 1000030
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "white",
+        "code": 1000031
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "newpurple",
+        "code": 1000032
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "pitaya",
+        "code": 1000033
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "pink",
+        "code": 1000034
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "plum",
+        "code": 1000035
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "lightpink",
+        "code": 1000036
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "black",
+        "code": 1000037
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "pistachio",
+        "code": 1000038
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "red",
+        "code": 1000039
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "blue",
+        "code": 1000040
+    },
+    {
+        "model": "iPhone 13 Pro Max",
+        "color": "skyblue",
+        "code": 1000041
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "clay",
+        "code": 1000042
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "lightblue",
+        "code": 1000043
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "ultramarine",
+        "code": 1000044
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "white",
+        "code": 1000045
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "newpurple",
+        "code": 1000046
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "pitaya",
+        "code": 1000047
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "pink",
+        "code": 1000048
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "plum",
+        "code": 1000049
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "lightpink",
+        "code": 1000050
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "black",
+        "code": 1000051
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "pistachio",
+        "code": 1000052
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "red",
+        "code": 1000053
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "blue",
+        "code": 1000054
+    },
+    {
+        "model": "iPhone 16 Plus",
+        "color": "skyblue",
+        "code": 1000055
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "clay",
+        "code": 1000056
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "lightblue",
+        "code": 1000057
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "ultramarine",
+        "code": 1000058
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "white",
+        "code": 1000059
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "newpurple",
+        "code": 1000060
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "pitaya",
+        "code": 1000061
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "pink",
+        "code": 1000062
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "plum",
+        "code": 1000063
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "lightpink",
+        "code": 1000064
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "black",
+        "code": 1000065
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "pistachio",
+        "code": 1000066
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "red",
+        "code": 1000067
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "blue",
+        "code": 1000068
+    },
+    {
+        "model": "iPhone 14 Plus",
+        "color": "skyblue",
+        "code": 1000069
+    },
+    {
+        "model": "iPhone 14",
+        "color": "clay",
+        "code": 1000070
+    },
+    {
+        "model": "iPhone 14",
+        "color": "lightblue",
+        "code": 1000071
+    },
+    {
+        "model": "iPhone 14",
+        "color": "ultramarine",
+        "code": 1000072
+    },
+    {
+        "model": "iPhone 14",
+        "color": "white",
+        "code": 1000073
+    },
+    {
+        "model": "iPhone 14",
+        "color": "newpurple",
+        "code": 1000074
+    },
+    {
+        "model": "iPhone 14",
+        "color": "pitaya",
+        "code": 1000075
+    },
+    {
+        "model": "iPhone 14",
+        "color": "pink",
+        "code": 1000076
+    },
+    {
+        "model": "iPhone 14",
+        "color": "plum",
+        "code": 1000077
+    },
+    {
+        "model": "iPhone 14",
+        "color": "lightpink",
+        "code": 1000078
+    },
+    {
+        "model": "iPhone 14",
+        "color": "black",
+        "code": 1000079
+    },
+    {
+        "model": "iPhone 14",
+        "color": "pistachio",
+        "code": 1000080
+    },
+    {
+        "model": "iPhone 14",
+        "color": "red",
+        "code": 1000081
+    },
+    {
+        "model": "iPhone 14",
+        "color": "blue",
+        "code": 1000082
+    },
+    {
+        "model": "iPhone 14",
+        "color": "skyblue",
+        "code": 1000083
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "clay",
+        "code": 1000084
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "lightblue",
+        "code": 1000085
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "ultramarine",
+        "code": 1000086
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "white",
+        "code": 1000087
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "newpurple",
+        "code": 1000088
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "pitaya",
+        "code": 1000089
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "pink",
+        "code": 1000090
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "plum",
+        "code": 1000091
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "lightpink",
+        "code": 1000092
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "black",
+        "code": 1000093
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "pistachio",
+        "code": 1000094
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "red",
+        "code": 1000095
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "blue",
+        "code": 1000096
+    },
+    {
+        "model": "iPhone 14 Pro",
+        "color": "skyblue",
+        "code": 1000097
+    },
+    {
+        "model": "iPhone 13",
+        "color": "clay",
+        "code": 1000098
+    },
+    {
+        "model": "iPhone 13",
+        "color": "lightblue",
+        "code": 1000099
+    },
+    {
+        "model": "iPhone 13",
+        "color": "ultramarine",
+        "code": 1000100
+    },
+    {
+        "model": "iPhone 13",
+        "color": "white",
+        "code": 1000101
+    },
+    {
+        "model": "iPhone 13",
+        "color": "newpurple",
+        "code": 1000102
+    },
+    {
+        "model": "iPhone 13",
+        "color": "pitaya",
+        "code": 1000103
+    },
+    {
+        "model": "iPhone 13",
+        "color": "pink",
+        "code": 1000104
+    },
+    {
+        "model": "iPhone 13",
+        "color": "plum",
+        "code": 1000105
+    },
+    {
+        "model": "iPhone 13",
+        "color": "lightpink",
+        "code": 1000106
+    },
+    {
+        "model": "iPhone 13",
+        "color": "black",
+        "code": 1000107
+    },
+    {
+        "model": "iPhone 13",
+        "color": "pistachio",
+        "code": 1000108
+    },
+    {
+        "model": "iPhone 13",
+        "color": "red",
+        "code": 1000109
+    },
+    {
+        "model": "iPhone 13",
+        "color": "blue",
+        "code": 1000110
+    },
+    {
+        "model": "iPhone 13",
+        "color": "skyblue",
+        "code": 1000111
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "clay",
+        "code": 1000112
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "lightblue",
+        "code": 1000113
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "ultramarine",
+        "code": 1000114
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "white",
+        "code": 1000115
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "newpurple",
+        "code": 1000116
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "pitaya",
+        "code": 1000117
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "pink",
+        "code": 1000118
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "plum",
+        "code": 1000119
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "lightpink",
+        "code": 1000120
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "black",
+        "code": 1000121
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "pistachio",
+        "code": 1000122
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "red",
+        "code": 1000123
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "blue",
+        "code": 1000124
+    },
+    {
+        "model": "iPhone 14 Pro Max",
+        "color": "skyblue",
+        "code": 1000125
+    },
+    {
+        "model": "iPhone 11",
+        "color": "clay",
+        "code": 1000126
+    },
+    {
+        "model": "iPhone 11",
+        "color": "lightblue",
+        "code": 1000127
+    },
+    {
+        "model": "iPhone 11",
+        "color": "ultramarine",
+        "code": 1000128
+    },
+    {
+        "model": "iPhone 11",
+        "color": "white",
+        "code": 1000129
+    },
+    {
+        "model": "iPhone 11",
+        "color": "newpurple",
+        "code": 1000130
+    },
+    {
+        "model": "iPhone 11",
+        "color": "pitaya",
+        "code": 1000131
+    },
+    {
+        "model": "iPhone 11",
+        "color": "pink",
+        "code": 1000132
+    },
+    {
+        "model": "iPhone 11",
+        "color": "plum",
+        "code": 1000133
+    },
+    {
+        "model": "iPhone 11",
+        "color": "lightpink",
+        "code": 1000134
+    },
+    {
+        "model": "iPhone 11",
+        "color": "black",
+        "code": 1000135
+    },
+    {
+        "model": "iPhone 11",
+        "color": "pistachio",
+        "code": 1000136
+    },
+    {
+        "model": "iPhone 11",
+        "color": "red",
+        "code": 1000137
+    },
+    {
+        "model": "iPhone 11",
+        "color": "blue",
+        "code": 1000138
+    },
+    {
+        "model": "iPhone 11",
+        "color": "skyblue",
+        "code": 1000139
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "clay",
+        "code": 1000140
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "lightblue",
+        "code": 1000141
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "ultramarine",
+        "code": 1000142
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "white",
+        "code": 1000143
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "newpurple",
+        "code": 1000144
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "pitaya",
+        "code": 1000145
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "pink",
+        "code": 1000146
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "plum",
+        "code": 1000147
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "lightpink",
+        "code": 1000148
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "black",
+        "code": 1000149
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "pistachio",
+        "code": 1000150
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "red",
+        "code": 1000151
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "blue",
+        "code": 1000152
+    },
+    {
+        "model": "iPhone 16 Pro",
+        "color": "skyblue",
+        "code": 1000153
+    },
+    {
+        "model": "iPhone 16",
+        "color": "clay",
+        "code": 1000154
+    },
+    {
+        "model": "iPhone 16",
+        "color": "lightblue",
+        "code": 1000155
+    },
+    {
+        "model": "iPhone 16",
+        "color": "ultramarine",
+        "code": 1000156
+    },
+    {
+        "model": "iPhone 16",
+        "color": "white",
+        "code": 1000157
+    },
+    {
+        "model": "iPhone 16",
+        "color": "newpurple",
+        "code": 1000158
+    },
+    {
+        "model": "iPhone 16",
+        "color": "pitaya",
+        "code": 1000159
+    },
+    {
+        "model": "iPhone 16",
+        "color": "pink",
+        "code": 1000160
+    },
+    {
+        "model": "iPhone 16",
+        "color": "plum",
+        "code": 1000161
+    },
+    {
+        "model": "iPhone 16",
+        "color": "lightpink",
+        "code": 1000162
+    },
+    {
+        "model": "iPhone 16",
+        "color": "black",
+        "code": 1000163
+    },
+    {
+        "model": "iPhone 16",
+        "color": "pistachio",
+        "code": 1000164
+    },
+    {
+        "model": "iPhone 16",
+        "color": "red",
+        "code": 1000165
+    },
+    {
+        "model": "iPhone 16",
+        "color": "blue",
+        "code": 1000166
+    },
+    {
+        "model": "iPhone 16",
+        "color": "skyblue",
+        "code": 1000167
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "clay",
+        "code": 1000168
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "lightblue",
+        "code": 1000169
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "ultramarine",
+        "code": 1000170
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "white",
+        "code": 1000171
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "newpurple",
+        "code": 1000172
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "pitaya",
+        "code": 1000173
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "pink",
+        "code": 1000174
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "plum",
+        "code": 1000175
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "lightpink",
+        "code": 1000176
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "black",
+        "code": 1000177
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "pistachio",
+        "code": 1000178
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "red",
+        "code": 1000179
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "blue",
+        "code": 1000180
+    },
+    {
+        "model": "iPhone 15 Pro Max",
+        "color": "skyblue",
+        "code": 1000181
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "clay",
+        "code": 1000182
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "lightblue",
+        "code": 1000183
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "ultramarine",
+        "code": 1000184
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "white",
+        "code": 1000185
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "newpurple",
+        "code": 1000186
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "pitaya",
+        "code": 1000187
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "pink",
+        "code": 1000188
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "plum",
+        "code": 1000189
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "lightpink",
+        "code": 1000190
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "black",
+        "code": 1000191
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "pistachio",
+        "code": 1000192
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "red",
+        "code": 1000193
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "blue",
+        "code": 1000194
+    },
+    {
+        "model": "iPhone 15 Plus",
+        "color": "skyblue",
+        "code": 1000195
+    },
+    {
+        "model": "iPhone 15",
+        "color": "clay",
+        "code": 1000196
+    },
+    {
+        "model": "iPhone 15",
+        "color": "lightblue",
+        "code": 1000197
+    },
+    {
+        "model": "iPhone 15",
+        "color": "ultramarine",
+        "code": 1000198
+    },
+    {
+        "model": "iPhone 15",
+        "color": "white",
+        "code": 1000199
+    },
+    {
+        "model": "iPhone 15",
+        "color": "newpurple",
+        "code": 1000200
+    },
+    {
+        "model": "iPhone 15",
+        "color": "pitaya",
+        "code": 1000201
+    },
+    {
+        "model": "iPhone 15",
+        "color": "pink",
+        "code": 1000202
+    },
+    {
+        "model": "iPhone 15",
+        "color": "plum",
+        "code": 1000203
+    },
+    {
+        "model": "iPhone 15",
+        "color": "lightpink",
+        "code": 1000204
+    },
+    {
+        "model": "iPhone 15",
+        "color": "black",
+        "code": 1000205
+    },
+    {
+        "model": "iPhone 15",
+        "color": "pistachio",
+        "code": 1000206
+    },
+    {
+        "model": "iPhone 15",
+        "color": "red",
+        "code": 1000207
+    },
+    {
+        "model": "iPhone 15",
+        "color": "blue",
+        "code": 1000208
+    },
+    {
+        "model": "iPhone 15",
+        "color": "skyblue",
+        "code": 1000209
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "clay",
+        "code": 1000210
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "lightblue",
+        "code": 1000211
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "ultramarine",
+        "code": 1000212
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "white",
+        "code": 1000213
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "newpurple",
+        "code": 1000214
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "pitaya",
+        "code": 1000215
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "pink",
+        "code": 1000216
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "plum",
+        "code": 1000217
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "lightpink",
+        "code": 1000218
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "black",
+        "code": 1000219
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "pistachio",
+        "code": 1000220
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "red",
+        "code": 1000221
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "blue",
+        "code": 1000222
+    },
+    {
+        "model": "iPhone 12 Pro Max",
+        "color": "skyblue",
+        "code": 1000223
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "clay",
+        "code": 1000224
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "lightblue",
+        "code": 1000225
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "ultramarine",
+        "code": 1000226
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "white",
+        "code": 1000227
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "newpurple",
+        "code": 1000228
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "pitaya",
+        "code": 1000229
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "pink",
+        "code": 1000230
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "plum",
+        "code": 1000231
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "lightpink",
+        "code": 1000232
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "black",
+        "code": 1000233
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "pistachio",
+        "code": 1000234
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "red",
+        "code": 1000235
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "blue",
+        "code": 1000236
+    },
+    {
+        "model": "iPhone 15 Pro",
+        "color": "skyblue",
+        "code": 1000237
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "clay",
+        "code": 1000238
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "lightblue",
+        "code": 1000239
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "ultramarine",
+        "code": 1000240
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "white",
+        "code": 1000241
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "newpurple",
+        "code": 1000242
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "pitaya",
+        "code": 1000243
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "pink",
+        "code": 1000244
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "plum",
+        "code": 1000245
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "lightpink",
+        "code": 1000246
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "black",
+        "code": 1000247
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "pistachio",
+        "code": 1000248
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "red",
+        "code": 1000249
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "blue",
+        "code": 1000250
+    },
+    {
+        "model": "iPhone 16 Pro Max",
+        "color": "skyblue",
+        "code": 1000251
+    }
+]
