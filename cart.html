@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <!-- NavBar -->
@@ -18,9 +17,11 @@
                 <a href="contact.html">Contact</a>
                 <a href="cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
                 <li onclick="hideSidebar()">
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                    </svg></a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
                 </li>
             </nav>
         </div>
@@ -35,9 +36,11 @@
             </nav>
             <ul class="nav-icon">   
                 <li onclick="showSidebar()">
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-                    </svg></a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                        </svg>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -59,8 +62,6 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const stripe = Stripe('pk_live_51R6UbtAyT85ChHEEQbRJGXq6DEhNwzm5UZxq5J8gpisY3dMcWqYGuv4ycqAT4uPCrlscWkpKV8xVJ3xEEV3gwKuW00sgLtLokl'); // Replace with your Stripe Publishable Key
-            const NGROK_URL = "https://079e-109-242-187-2.ngrok-free.app"; // Your Ngrok URL
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartItemsContainer = document.getElementById('cart-items');
             const cartTotalElement = document.getElementById('cart-total');
@@ -114,24 +115,9 @@
                 });
             });
 
-            checkoutButton.addEventListener('click', async () => {
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-                const response = await fetch(`${NGROK_URL}/create-checkout-session`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ items: cart }),
-                });
-
-                if (!response.ok) {
-                    alert('Error creating checkout session!');
-                    return;
-                }
-
-                const { id } = await response.json();
-                stripe.redirectToCheckout({ sessionId: id });
+            // Redirect to checkout.html instead of Stripe
+            checkoutButton.addEventListener('click', () => {
+                window.location.href = 'checkout.html';
             });
 
             updateCartCount();
