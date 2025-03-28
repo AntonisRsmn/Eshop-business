@@ -17,11 +17,9 @@
                 <a href="contact.html">Contact</a>
                 <a href="cart.html" class="cart-link">Cart (<span class="cart-count">0</span>)</a>
                 <li onclick="hideSidebar()">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                        </svg>
-                    </a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg></a>
                 </li>
             </nav>
         </div>
@@ -36,11 +34,9 @@
             </nav>
             <ul class="nav-icon">   
                 <li onclick="showSidebar()">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-                        </svg>
-                    </a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg></a>
                 </li>
             </ul>
         </div>
@@ -115,8 +111,8 @@
                 });
             });
 
-            // Redirect to checkout.html instead of Stripe
             checkoutButton.addEventListener('click', () => {
+                console.log("Redirecting to checkout.html..."); // Debugging log
                 window.location.href = 'checkout.html';
             });
 
